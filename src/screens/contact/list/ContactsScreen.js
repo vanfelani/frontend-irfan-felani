@@ -22,7 +22,7 @@ import {findAll, deleteById} from '../../../actions/contacts';
 import styles from './styles';
 import {showError} from '../../../utils/toast';
 
-function RowServices({onPress, item, index, onDelete}) {
+function RowContacts({onPress, item, index, onDelete}) {
   let photo = item.photo;
   if (photo == 'N/A') {
     photo = 'https://www.freeiconspng.com/uploads/no-image-icon-0.png';
@@ -147,7 +147,7 @@ class ContactsScreen extends Component {
             }
             data={data.data}
             renderItem={({item, index}) => (
-              <RowServices
+              <RowContacts
                 style={styles.card}
                 onPress={this.onShowForm}
                 item={item}
